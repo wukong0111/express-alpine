@@ -21,7 +21,7 @@ if (isDev) {
 }
 
 // API Routes
-app.get("/api/health", (_req: Request, res: Response) => {
+app.get("/app/health", (_req: Request, res: Response) => {
     res.json({
         status: "ok",
         environment: process.env.NODE_ENV,
@@ -29,7 +29,7 @@ app.get("/api/health", (_req: Request, res: Response) => {
     });
 });
 
-app.get("/api/users", async (_req: Request, res: Response) => {
+app.get("/app/users", async (_req: Request, res: Response) => {
     const users = await Promise.resolve([{ id: 1, name: "Usuario Ejemplo" }]);
     res.json({ users });
 });

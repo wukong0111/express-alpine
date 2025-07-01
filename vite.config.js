@@ -6,7 +6,7 @@ export default defineConfig(({ command }) => {
         server: {
             port: 3001,
             proxy: {
-                "/api": {
+                "/app": {
                     target: "http://localhost:3000",
                     changeOrigin: true,
                 },

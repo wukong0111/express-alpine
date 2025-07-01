@@ -26,7 +26,7 @@ Alpine.data(
 
         async loadUsers() {
             try {
-                const response = await fetch("/api/users");
+                const response = await fetch("/app/users");
                 const data = await response.json();
                 this.users = data.users;
             } catch (error) {
