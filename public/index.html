@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi App - Express + TypeScript + Alpine</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div x-data="app" class="container">
+    <h1 x-text="message"></h1>
+
+    <button @click="loadUsers" class="btn">
+      Cargar Usuarios
+    </button>
+
+    <div x-show="users.length > 0" class="users">
+      <h2>Usuarios:</h2>
+      <template x-for="user in users" :key="user.id">
+        <div class="user-card">
+          <span x-text="user.name"></span>
+        </div>
+      </template>
+    </div>
+
+    <button @click="fetch('/api/health').then(r => r.json()).then(data => console.log(data))">
+      Health Check (ver consola)
+    </button>
+  </div>
+
+  <script type="module" src="/main.ts"></script>
+</body>
+
+</html>

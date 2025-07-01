@@ -1,0 +1,40 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.users {
+  margin-top: 20px;
+}
+
+.user-card {
+  background: #f8f9fa;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
